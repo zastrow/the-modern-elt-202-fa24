@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Web Design II</title>
+		<style>
+			:root {
+				--color-primary: color-mix(in srgb, blue, aqua 60%);
+  			--color-secondary: color-mix(in srgb, var(--color-primary), black 40%);
+			}
+			body {
+				color: color-mix(in srgb, #333, var(--color-primary) 10%);
+				background-color: color-mix(in srgb, #ddd, var(--color-primary) 5%);
+				min-block-size: 100vh;
+				margin: 0;
+				padding: 1em;
+				box-sizing: border-box;
+				display: grid;
+				place-items: center;
+				font: 100% / 1.5 system-ui, sans-serif;
+			}
+			a[href]  {
+				color: var(--color-primary);
+				
+				&:visited {
+					color: var(--color-secondary);
+				}
+			}
+			li {
+				font-size: 1.25em;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div>
+			<h1>Web Design II</h1>
+
+			<ol>
+				<li>
+					<a href="01-intro-to-html.html">Introduction to HTML</a>
+				</li>
+			</ol>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+  overflow: auto;
+  padding: 1em 0.5em;
+  border-radius: 0.25em;
+  border: 1px solid var(--hl-border);
+  background-color: var(--hl-background);
+  color: var(--hl-color-base);
+}
+
+.hljs-ln-n {
+  color: hsl(0deg 0% 60%)
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+  color: var(--hl-color-1);
+}
+
+.hljs-code {
+  color: var(--hl-color-2);
+}
+
+.hljs-class .hljs-title {
+  color: var(--hl-color-3);
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: var(--hl-color-4);
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: var(--hl-color-5);
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: var(--hl-color-6);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold;
+}
