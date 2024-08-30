@@ -195,7 +195,7 @@ Note: This is something to be aware of, but we will cover it in more detail late
 
 <!-- .slide: class="layout-bottom" -->
 
-***Attributes*** are placed in an element’s opening tag, containing information such as where a link goes, or how an image is read to screen readers, among other possibilites.
+***Attributes*** are placed in an element’s opening tag, containing information such as where a link goes, or how an image is read to screen readers, among other possibilities.
 
 <div>
 
