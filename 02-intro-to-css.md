@@ -1,6 +1,6 @@
 <!-- .slide: class="layout-intro" -->
 <div style="width:200px;margin-bottom:20px">
-  <img src="/assets/images/logo.svg">
+  <img src="assets/images/logo.svg">
 </div>
 
 # Introduction to CSS<!-- .element class="r-fit-text" -->
@@ -65,7 +65,7 @@ Web Design II<!-- .element class="footer-content" -->
 
 ===
 
-<!-- .slide: class="layout-left" data-background-image="/assets/images/intro-to-css/zeldman.webp" -->
+<!-- .slide: class="layout-left" data-background-image="assets/images/intro-to-css/zeldman.webp" -->
 
 > Content precedes design. Design in the absence
 > of content is not design, it’s decoration.

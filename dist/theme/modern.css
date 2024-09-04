@@ -551,7 +551,7 @@ dd + .def-term {
  * LAYOUT: PATTERN
  *********************************************/
 .backgrounds:has(:not(.layout-title)) {
-  background: radial-gradient(circle at 50% 0%, hsla(0, 0%, 0%, 0.8), hsl(0, 0%, 0%) 80%), url("/assets/images/pattern.svg") no-repeat center/cover;
+  background: radial-gradient(circle at 50% 0%, hsla(0, 0%, 0%, 0.8), hsl(0, 0%, 0%) 80%), url("../../assets/images/pattern.svg") no-repeat center/cover;
 }
 
 /*********************************************
@@ -633,7 +633,7 @@ dd + .def-term {
   width: 100vw;
   height: 100vh;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, hsla(0, 0%, 100%, 0.9), hsl(0, 0%, 100%)), url("/assets/images/pattern-invert.svg") no-repeat center/cover white;
+  background: radial-gradient(circle at 50% 0%, hsla(0, 0%, 100%, 0.9), hsl(0, 0%, 100%)), url("../../assets/images/pattern-invert.svg") no-repeat center/cover white;
 }
 
 .backgrounds:has(.layout-left.present)::after {
@@ -681,7 +681,7 @@ dd + .def-term {
 
 .backgrounds .layout-top,
 .backgrounds .layout-bottom {
-  background: radial-gradient(circle at 50% 0%, hsla(0, 0%, 100%, 0.9), hsl(0, 0%, 100%)), url("/assets/images/pattern-invert.svg") no-repeat center/cover white;
+  background: radial-gradient(circle at 50% 0%, hsla(0, 0%, 100%, 0.9), hsl(0, 0%, 100%)), url("../../assets/images/pattern-invert.svg") no-repeat center/cover white;
 }
 
 .backgrounds .layout-top {
