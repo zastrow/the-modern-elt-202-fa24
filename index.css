@@ -1,17 +1,25 @@
 :root {
-  --color-primary: color-mix(in lch, blue, aqua 60%);
-  --color-secondary: color-mix(in lch, aqua, lime 60%);
+  --green: color-mix(in srgb, aqua, lime 60%);
+
+  --color-primary: color-mix(in srgb, blue, aqua 60%);
+  --color-secondary: light-dark(
+      color-mix(in srgb, var(--green), green 40%),
+      var(--green)
+    );
 
   --color-black: black;
   --color-white: white;
 
-  --bg-light: color-mix(in lch, var(--color-primary), #f2f2f2 95%);
-  --bg-dark: color-mix(in lch, var(--color-primary), #191919 95%);
+  --bg-light: color-mix(in srgb, var(--color-primary), #f2f2f2 95%);
+  --bg-dark: color-mix(in srgb, var(--color-primary), #191919 95%);
 
   --font-primary: "Plus Jakarta Sans", sans-serif;
   --font-heading: var(--r-main-font);
   --font-secondary: "EB Garamond", serif;
   --font-code: "Sometype Mono", monospace;
+
+  --link-dark: var(--color-primary);
+  --link-light: var(--color-primary);
 }
 
 body {
@@ -27,28 +35,42 @@ body {
 header {
   background-color: black;
   color: white;
-  padding: 1em;
+  padding-block: 2rem;
+  margin-block-end: 2rem;
 }
 
 h1 {
   font-weight: 650;
+  margin: unset;
 }
 
-a[href]  {
-  color: var(--color-primary);
+a  {
+  color: light-dark(var(--link-dark), var(--link-light));
+  text-underline-offset: 0.125em;
+  text-decoration-color: currentColor;
+  transition: text-decoration-color 250ms ease-in-out;
+
+  &:hover,
+  &:visited:hover {
+    text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
+  }
   
   &:visited {
-    color: color-mix(in lch, var(--color-primary), black 80%);
+    --link-dark: color-mix(in srgb, var(--color-primary), var(--bg-light) 20%);
+    --link-light: color-mix(in srgb, var(--color-primary), var(--bg-dark) 20%);
   }
 }
 
 ol {
-  list-style: '';
   padding: 0;
 }
 
 li {
   font-size: 1.25em;
+
+  &::marker {
+    color: var(--color-secondary);
+  }
 }
 
 img {
