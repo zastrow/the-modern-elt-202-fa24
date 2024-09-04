@@ -47,7 +47,6 @@
   --hl-color-6: hsl(162, 82%, 37%);
   --hl-color-7: hsl(56, 99%, 48%);
   --hl-color-8: hsl(24, 98%, 64%);
-
 }
 
 .reveal-viewport {
@@ -99,6 +98,10 @@
   text-transform: var(--r-heading-text-transform);
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word;
+}
+
+.reveal :where(h1,h2,h3,h4,h5,h6,p,dd,dt,li) {
+  text-wrap: balance
 }
 
 .reveal h1 {
@@ -735,6 +738,7 @@ dd + .def-term {
   --gap: 6rem;
   grid-template-rows: calc(50% - (var(--gap) * 0.5))  calc(50% - (var(--gap) * 0.5));
   gap: var(--gap);
+  height: 100%;
 }
 
 .slides .layout-top > *:first-child,
@@ -829,6 +833,10 @@ dd + .def-term {
   position: absolute;
 }
 
+.pre {
+  white-space: pre;
+}
+
 .d-flex {
   display: flex;
 }
@@ -871,6 +879,10 @@ dd + .def-term {
 
 .flex-justify-space-between {
   justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .text-start {

@@ -1,0 +1,71 @@
+:root {
+  --color-primary: color-mix(in lch, blue, aqua 60%);
+  --color-secondary: color-mix(in lch, aqua, lime 60%);
+
+  --color-black: black;
+  --color-white: white;
+
+  --bg-light: color-mix(in lch, var(--color-primary), #f2f2f2 95%);
+  --bg-dark: color-mix(in lch, var(--color-primary), #191919 95%);
+
+  --font-primary: "Plus Jakarta Sans", sans-serif;
+  --font-heading: var(--r-main-font);
+  --font-secondary: "EB Garamond", serif;
+  --font-code: "Sometype Mono", monospace;
+}
+
+body {
+  color-scheme: light dark;
+  color: light-dark(var(--color-dark), var(--color-light));
+  background-color: light-dark(var(--bg-light), var(--bg-dark));
+  min-block-size: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  font: 100% / 1.5 var(--font-primary);
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+h1 {
+  font-weight: 650;
+}
+
+a[href]  {
+  color: var(--color-primary);
+  
+  &:visited {
+    color: color-mix(in lch, var(--color-primary), black 80%);
+  }
+}
+
+ol {
+  list-style: '';
+  padding: 0;
+}
+
+li {
+  font-size: 1.25em;
+}
+
+img {
+  max-inline-size: 100%;
+}
+
+.max-width {
+  width: min(100%, 65ch);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(20%, 10rem) auto;
+  gap: 4rem;
+}
+
+.grid-col-2 {
+  grid-column: 2;
+}

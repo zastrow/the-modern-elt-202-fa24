@@ -2,46 +2,36 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width">
 		<title>Web Design II</title>
-		<style>
-			:root {
-				--color-primary: color-mix(in srgb, blue, aqua 60%);
-  			--color-secondary: color-mix(in srgb, var(--color-primary), black 40%);
-			}
-			body {
-				color: color-mix(in srgb, #333, var(--color-primary) 10%);
-				background-color: color-mix(in srgb, #ddd, var(--color-primary) 5%);
-				min-block-size: 100vh;
-				margin: 0;
-				padding: 1em;
-				box-sizing: border-box;
-				display: grid;
-				place-items: center;
-				font: 100% / 1.5 system-ui, sans-serif;
-			}
-			a[href]  {
-				color: var(--color-primary);
-				
-				&:visited {
-					color: var(--color-secondary);
-				}
-			}
-			li {
-				font-size: 1.25em;
-			}
-		</style>
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
-		<div>
-			<h1>Web Design II</h1>
-
-			<ol>
-				<li>
-					<a href="01-intro-to-html.html">Introduction to HTML</a>
-				</li>
-			</ol>
-		</div>
+		<header>
+			<div class="max-width grid">
+				<div>
+					<img src="/assets/images/logo.svg" alt="The Modern College of Design">
+				</div>
+				<h1>ELT 202: Web Design II</h1>
+			</div>
+		</header>
+		<main>
+			<div class="max-width grid">
+				<div class="grid-col-2">
+					<p></p>
+					<ol>
+						<li>
+							<a href="01-intro-to-html.html">Introduction to HTML</a>
+						</li>
+						<li>
+							<a href="02-intro-to-css.html">Introduction to CSS</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
