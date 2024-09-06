@@ -38,7 +38,7 @@ Web Design II<!-- .element class="footer-content" -->
 <style>
   .box-model-demo {
     --p: 2em;
-    --s: calc(var(--p) * 3);
+    --s: calc(var(--p) * 2.5);
     font-family: var(--r-code-font);
     display: flex;
     justify-content: center;
@@ -72,9 +72,9 @@ Web Design II<!-- .element class="footer-content" -->
 	<span class="box-model-demo-text">This content sets the size</span>
 </div>
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.75em" -->
+<p><code>width</code> and <code>height</code> properties change content size</p> <!-- .element class="text-center fragment" style="font-size:0.75em" -->
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.5em" -->
+&nbsp; <!-- .element class="text-center" style="font-size:0.6em" -->
 
 
 ===
@@ -85,9 +85,9 @@ Web Design II<!-- .element class="footer-content" -->
 	<span class="box-model-demo-text">This content sets the size</span>
 </div>
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.75em" -->
+<p>Interior spacing around the edges of the box</p> <!-- .element class="text-center fragment" style="font-size:0.75em" -->
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.5em" -->
+&nbsp; <!-- .element class="text-center" style="font-size:0.6em" -->
 
 
 ===
@@ -98,9 +98,9 @@ Web Design II<!-- .element class="footer-content" -->
 	<span class="box-model-demo-text">This content sets the size</span>
 </div>
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.75em" -->
+<p>The edge of the box, which can have its own size</p> <!-- .element class="text-center fragment" style="font-size:0.75em" -->
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.5em" -->
+&nbsp; <!-- .element class="text-center" style="font-size:0.6em" -->
 
 
 ===
@@ -111,9 +111,9 @@ Web Design II<!-- .element class="footer-content" -->
 	<span class="box-model-demo-text">This content sets the size</span>
 </div>
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.75em" -->
+<p>The outer edge of the box, defining space between boxes</p> <!-- .element class="text-center fragment" style="font-size:0.75em" -->
 
-&nbsp; <!-- .element class="text-center" style="font-size:0.5em" -->
+&nbsp; <!-- .element class="text-center" style="font-size:0.6em" -->
 
 ===
 
@@ -125,11 +125,11 @@ Web Design II<!-- .element class="footer-content" -->
 
 Content &nbsp;|&nbsp; Padding &nbsp;|&nbsp; Border &nbsp;|&nbsp; Margin <!-- .element class="text-center" style="font-size:0.75em" -->
 
-Safari includes Position as its fifth component <!-- .element class="text-center" style="font-size:0.5em" -->
+Safari includes Position as its fifth component <!-- .element class="text-center fragment" style="font-size:0.6em" -->
 
 ===
 
-# Things to know about working with these boxes
+# Things to know when working with these boxes
 
 ---
 
@@ -141,12 +141,44 @@ And somethings to know about working in web design and development
 
 ---
 
+The web will err on the side of showing content
+
+===
+
+<div style="display:grid;grid-template-columns:50% 50%;width:100%;gap:2em;">
+
+```css[]
+div {
+  height: 170px;
+  width: 170px;
+  font-family: sans-serif;
+  font-size: 50px;
+  border: 2px solid black;
+}
+```
+
+<iframe width="100%" height="100%" sandbox srcdoc="<style>body{background:white}div {
+  height: 170px;
+  width: 170px;
+  font-family: sans-serif;
+  font-size: 50px;
+  border: 2px solid black;
+}</style><div>CSS IS AWESOME</div>">
+
+</div>
+
+===
+
+# 2
+
+---
+
 <p class="text-wrap-unset">Height is not your friend!<br>
 Only use the <code>height</code> property when it makes sense, otherwise let the content dictate the height of the element</p>
 
 ===
 
-# 2
+# 3
 
 ---
 
@@ -174,7 +206,7 @@ The display size of an element is a dimensional property (`height` or `width`) +
 
 ===
 
-# 3
+# 4
 
 ---
 
@@ -203,32 +235,161 @@ The display size can be forced to be the same as dimensional properties value wi
 
 ===
 
-# 4
-
----
-
-Margins overlap and the largest wins<br><br>
-
-===
-
-
 # 5
 
 ---
 
-Paddings compound<br><br>
+Margins overlap and the largest margin wins
 
 ===
+
+<div style="display:grid;grid-template-columns:50% 50%;width:100%;gap:2em;">
+
+```css[]
+h1 {
+  font-size: 96px;
+  padding: 144px 0;
+}
+
+p {
+  font-size: 18px;
+  padding: 24px 0;
+}
+```
+
+```html[]
+<html>
+  <head>...</head>
+  <body>
+    <h1>My Homepage</h1>
+    <p>
+      Welcome to my website!
+    </p>
+  </body>
+</html>
+```
+
+</div>
+
+===
+
 
 # 6
 
 ---
 
-The box model is affected by the value of the `display` property.
+Paddings compound and can cause issues<br><br>
+
+===
+
+<div style="display:grid;grid-template-columns:50% 50%;width:100%;gap:2em;">
+
+```
+<style>
+  div {
+    padding: 40px;
+  }
+</style>
+
+<div>
+  <div>
+    <div>
+      Nested content
+    </div>
+  </div>
+</div>
+```
+
+<iframe width="100%" height="100%" sandbox srcdoc="<style>body{background:white}div{padding:40px}</style><div><div><div>Nested content</div></div></div>">
+
+</div>
+
+===
+
+<div style="display:grid;grid-template-columns:50% 50%;width:100%;gap:2em;">
+
+```
+<style>
+  div {
+    padding: 40px;
+  }
+</style>
+
+<div>
+  <div>
+    <div>
+      Nested content
+    </div>
+  </div>
+</div>
+```
+
+<iframe width="100%" height="100%" sandbox srcdoc="<style>body{background:white}div{padding:40px;outline:2px solid deeppink;}</style><div><div><div>Nested content</div></div></div>">
+
+</div>
+
+===
+
+<div style="display:grid;grid-template-columns:50% 50%;width:100%;gap:2em;">
+
+```
+<style>
+  div {
+    margin: 40px;
+  }
+</style>
+
+<div>
+  <div>
+    <div>
+      Nested content
+    </div>
+  </div>
+</div>
+```
+
+<iframe width="100%" height="100%" sandbox srcdoc="<style>body{background:white}div{margin:40px;outline:2px solid deeppink;}</style><div><div><div>Nested content</div></div></div>">
+
+</div>
+
+===
+
+<div style="display:grid;grid-template-columns:50% 50%;width:100%;gap:2em;">
+
+```
+<style>
+  div {
+    padding: 40px;
+    margin: 40px;
+  }
+</style>
+
+<div>
+  <div>
+    <div>
+      Nested content
+    </div>
+  </div>
+</div>
+```
+
+<iframe width="100%" height="100%" sandbox srcdoc="<style>body{background:white}div{padding:40px;margin:40px;outline:2px solid deeppink;}</style><div><div><div>Nested content</div></div></div>">
+
+</div>
 
 ===
 
 # 7
+
+---
+
+The box model is affected by the value of the `display` property.
+
+More on that next week
+
+===
+
+# 8
 
 ---
 
@@ -257,7 +418,7 @@ Web design is an illusion.<br>You are not creating the thing, you are creating s
 ```css
   .box-model-demo {
     position: relative;
-    margin: 96px auto;
+    margin: 80px auto;
     padding: 32px;
     border: 8px solid yellow;
     box-shadow: inset 0 0 0 32px lime, 0 0 0 32px orange;
