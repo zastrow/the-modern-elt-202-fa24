@@ -377,6 +377,10 @@ dd + .def-term {
   word-wrap: normal;
 }
 
+:not(pre) code {
+  color: var(--color-secondary)
+}
+
 .reveal p:has(key) {
   display: flex;
   align-items: center;
@@ -608,7 +612,7 @@ dd + .def-term {
        hsl(0deg 0% 0% / 80%),
        hsl(0deg 0% 0% / 100%) 80%
      ),
-     url('assets/images/pattern.svg') no-repeat center / cover;
+     url('../../assets/images/pattern.svg') no-repeat center / cover;
 }
 
 /*********************************************
@@ -713,7 +717,7 @@ dd + .def-term {
        hsl(0deg 0% 100% / 90%),
        hsl(0deg 0% 100% / 100%)
      ),
-    url('assets/images/pattern-invert.svg') no-repeat center / cover white;
+    url('../../assets/images/pattern-invert.svg') no-repeat center / cover white;
   ;
 }
 
@@ -774,7 +778,7 @@ dd + .def-term {
        hsl(0deg 0% 100% / 90%),
        hsl(0deg 0% 100% / 100%)
      ),
-    url('assets/images/pattern-invert.svg') no-repeat center / cover white;
+    url('../../assets/images/pattern-invert.svg') no-repeat center / cover white;
   ;
 }
 
@@ -897,6 +901,10 @@ dd + .def-term {
   text-align: end;
 }
 
+.text-wrap-unset {
+  text-wrap: unset !important;
+}
+
 .color-primary {
   color: var(--color-primary);
 }
@@ -964,3 +972,19 @@ dd + .def-term {
 .hl-color-8 {
   color: var(--hl-color-8);
 }
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+@for $i from 1 through 9 {
+  .fw-#{$i * 100} {
+    font-weight: #{$i * 100};
+    font-variation-settings: 'wght' #{$i * 100};
+  }
+}
+

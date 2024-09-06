@@ -348,6 +348,10 @@ dd + .def-term {
   word-wrap: normal;
 }
 
+:not(pre) code {
+  color: var(--color-secondary);
+}
+
 .reveal p:has(key) {
   display: flex;
   align-items: center;
@@ -796,6 +800,10 @@ dd + .def-term {
   text-align: end;
 }
 
+.text-wrap-unset {
+  text-wrap: unset !important;
+}
+
 .color-primary {
   color: var(--color-primary);
 }
@@ -862,4 +870,57 @@ dd + .def-term {
 
 .hl-color-8 {
   color: var(--hl-color-8);
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-100 {
+  font-weight: 100;
+  font-variation-settings: "wght" 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+  font-variation-settings: "wght" 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+  font-variation-settings: "wght" 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+  font-variation-settings: "wght" 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+  font-variation-settings: "wght" 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
 }
