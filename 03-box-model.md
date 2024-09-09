@@ -248,12 +248,12 @@ Margins overlap and the largest margin wins
 ```css[]
 h1 {
   font-size: 96px;
-  padding: 144px 0;
+  margin: 144px 0;
 }
 
 p {
   font-size: 18px;
-  padding: 24px 0;
+  margin: 24px 0;
 }
 ```
 
